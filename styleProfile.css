@@ -1,0 +1,185 @@
+		*{
+	margin: 0;
+		padding: 0;
+		}
+		body{
+
+		}
+		#judul{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			margin-top: 3%;
+			color: #252525;
+			font-family: 'Alkatra',Sans-Serif;*/
+		}
+	input[type="checkbox"]{
+	  width: 65px;
+		height: 45px;
+		z-index: 150;
+		position: absolute;
+		margin-top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity:0;
+	}
+	/*membuat kotak bayangan*/
+  label {
+	display: block;
+	margin: auto;
+	margin-top: 6%;
+	position: relative;
+	width: 100px;
+	height: 50px;
+  background-color: #ebebeb;
+  border-radius: 75px;
+	box-shadow: inset 0px 5px 15px rgba(0.8,0.8,0.8,0.19),
+	inset 0px -5px 10px rgba(200,200,200,0.4);
+	transition: 0.3s;
+  }
+  /*membuat bola kuning*/
+	label::after{
+	content: "";
+	width: 45px;
+	height: 45px;
+	top: 2.5px;
+	left: 2.4px;
+	position: absolute;
+	border-radius: 100px;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	transition: 0.3s;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	}
+	/*mengatur label dan svg*/
+	label svg{
+		position: absolute;
+		width:33px ;
+		top: 8px;
+		z-index: 100;
+		top: 8;
+	}
+	label svg.sun{
+	left:8px;
+	fill: #fff;
+  transition:0.3s ;
+	}
+	label svg.moon{
+	left: 60px;
+	fill: #7e7e7e;
+	transition: 0.3s;
+	}
+/*jika input di checked === label bg akan berubah warna*/
+	input:checked+label{
+	background-color: #242424;
+	}
+ /* sedudah di checked 180degri dan berubah warna*/
+	input:checked+label::after{
+		left: 51px;
+		background: linear-gradient(180deg,#777,#3a3a3a);
+		}
+		/*sun akam berubah warna*/
+		input:checked+label svg.sun{
+			fill: #7e7e7e;
+		}
+		/*begitupun dengan dia yang pergi:> adalah moon*/
+		input:checked+label svg.moon{
+			fill: #fff;
+		}
+#konten #center{
+			padding: 15px;
+		}
+	#konten{
+			margin-top: 15%;
+			padding: 15px;
+		}
+		#center{
+		 border: 1px solid #252525;
+		 padding: 15px;
+		 margin: 20px;
+		font-size: 18px;
+		border-radius: 7px;
+	  background-color: white;
+		color:#252525;
+		box-shadow:5px -20px 20px -20px;
+	}
+  #a{
+	color: #252525;
+  text-decoration: none;
+  padding: 10px;
+  outline: none;
+  padding:0;
+  border-radius: 5px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat',Sans-Serif;
+	}
+	
+	footer{
+		font-family: 'Alkatra',Sans-Serif;*/
+}
+	/*mengatur responsive*/
+@media screen and (max-width:350px){
+	#judul{
+		font-size:1rem;
+	}
+	#konten{
+ margin-top:10%;
+	}
+	#a{
+		font-size: 90%;
+	}
+footer{
+position: relative;
+font-size: 90%;
+bottom: 0.5%;
+text-align: center;
+}
+#center{
+padding:15px;
+box-shadow:0px -15px 15px -15px;
+}
+}
+
+@media screen and (max-width:676px) and (min-width:351px){
+#judul{
+		font-size: 1rem;
+	}
+	#konten{
+ margin-top:10%;
+	}
+	#a{
+		font-size: 95%;
+	}
+	footer{
+font-size: 85%;
+position:absolute;
+right: 0;
+left: 0;
+margin: 0;
+padding: 0;
+bottom: 0.5%;
+text-align: center;
+	}
+}
+@media screen and (max-width:1500px) and (min-width:678px){
+	#judul{
+		font-size: 1rem;
+	}
+	#konten{
+ margin-top:10%;
+	}
+	#a{
+		font-size: 90%;
+	}
+	footer{
+font-size: 80%;
+position: absolute;
+right: 0;
+left: 0;
+margin: 0;
+padding: 0;
+bottom: 0.5%;
+text-align: center;
+	}
+}
